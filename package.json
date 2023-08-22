@@ -1,6 +1,6 @@
 {
   "name": "xr-wasmlib",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "files": [
     "dist"
   ],
@@ -17,7 +17,6 @@
   "scripts": {
     "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
     "build": "webpack build && tsc -p tsconfig.json --emitDeclarationOnly -outDir dist",
-    
     "release": "npm run ci && npm run build && release-it"
   }
 }
