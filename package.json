@@ -17,7 +17,7 @@
   "scripts": {
     "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
     "build": "webpack build && tsc -p tsconfig.json --emitDeclarationOnly -outDir dist",
-    "prepublishOnly": "npm run ci && npm run build",
-    "release": "npm run ci && release-it"
+    
+    "release": "npm run ci && npm run build && release-it"
   }
 }
