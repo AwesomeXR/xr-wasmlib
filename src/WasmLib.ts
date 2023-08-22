@@ -109,13 +109,7 @@ export class WasmLib {
     try {
       console.log(`>>> call ${cmd}: ${args.join(' ')}`);
 
-      const errno = this.ccall<number>(
-        cmd,
-        'number',
-        ['number', 'number'],
-        [argv.argc, argv.argvPtr]
-      );
-
+      const errno = this.ccall<number>(cmd, 'number', ['number', 'number'], [argv.argc, argv.argvPtr]);
       if (errno !== 0) throw new Error('exist with ' + errno);
 
       argv.free();
